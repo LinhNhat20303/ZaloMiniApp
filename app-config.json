@@ -1,0 +1,38 @@
+{
+  "app": {
+    "title": "Tiki",
+    "headerColor": "#1843EF",
+    "textColor": "white",
+    "statusBarColor": "#1843EF",
+    "leftButton": "both"
+  },
+  "debug": false,
+  "listCSS": [],
+  "listSyncJS": [],
+  "listAsyncJS": [],
+  "pages": [
+    "/user",
+    "/form",
+    "/dynamic-route",
+    "/about",
+    "/404",
+    "/random/aboutRandom",
+    "/swipe",
+    "/product/productPages",
+    "/product/productDescription",
+    "/product/productView",
+    "/chart",
+    "/chart/smartphoneMarket ",
+    "/chart/horizonBarChart",
+    "/chart/lineChart",
+    "/chart/pieChart",
+    "/chart/verticalBarChart",
+    "/NewShoppingPage/itemDescription",
+    "/tableContent/product_view_from_sub_cate",
+    "/tableContent/product_description_from_sub_cate",
+    "/SliderToPage/first_slider_home_page",
+    "/SliderToPage/banner_image"
+    
+    
+  ]
+}
