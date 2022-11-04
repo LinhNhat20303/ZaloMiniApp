@@ -1,23 +1,24 @@
 import React,{useState} from 'react'
-import { Avatar, List, ListItem, Page, Title, useStore, Icon } from 'zmp-framework/react'
+import { Avatar, List, ListItem, Page, Title, useStore, Icon, zmp } from 'zmp-framework/react'
 import src from 'zmp-sdk'
 import NavbarBack from '../components/navbar-back'
-
+import api from "zmp-sdk";
 
 
 const UserPage = () => {
   const user = useStore('user')
-  
+ function restore(){
+  api.removeStorage({
+    keys: ['storageProduct'],
+    
+  });
+}
 
   return (
     <Page 
       name="user"
     >
-      <NavbarBack
-        title="Thông tin tài khoản"
-        linkRight="/form"
-        labelRight="Edit"
-      />
+     <NavbarBack />
       <div style={{ textAlign: 'center', marginTop: 32 }}>
         {/* <Avatar story online src={user.avatar.startsWith('http') ? user.avatar : null}>{user.avatar}</Avatar> */}
         <Avatar story online src={user?.avatar.startsWith('http') ? user.avatar : null}>{user.avatar}</Avatar>
@@ -66,6 +67,14 @@ const UserPage = () => {
            <ListItem link="#" title='Password' description="***********" >
            <Icon className='list-icon' slot='media' zmp='zi-setting' />
            <Icon className='list-icon' zmp='zi-chevron-right'></Icon>
+           </ListItem>
+           <ListItem onClick={()=>zmp.views.main.router.navigate("/product/ItemListCRUD")} link="#" title='Danh Sách Sản Phẩm' >
+           <Icon className='list-icon' slot='media' zmp='zi-edit' />
+           <Icon className='list-icon' zmp='zi-chevron-right' ></Icon>
+           </ListItem>
+           <ListItem onClick={()=>restore()} link="#" title='Restore' >
+           <Icon className='list-icon' slot='media' zmp='zi-edit' />
+           <Icon className='list-icon' zmp='zi-chevron-right' ></Icon>
            </ListItem>
         </List>
       

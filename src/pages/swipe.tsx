@@ -23,10 +23,11 @@ const names = [
   "Zing mp3",
 ];
 import NavbarBack from "../components/navbar-back";
-const avatars = ["ZD", "ZP", "BM", "ZN", "Z", "VNG", "AB", "XM"];
+
 
 export default () => {
   const products = useStore("getSubCategoryItem");
+  const swipePageData = useStore("getSwipePageData");
   return (
     <Page>
       <Navbar backLink title="Luot"></Navbar>
@@ -34,7 +35,7 @@ export default () => {
         {/* slidesPerView={4} spaceBetween={1} */}
 
         <Swiper slidesPerView={4} spaceBetween={1}>
-          <SwiperSlide>
+          <SwiperSlide className="justify-between">
             <Link tabLink="#tab-1" tabLinkActive>
               Tất cả
             </Link>
@@ -50,22 +51,29 @@ export default () => {
           </SwiperSlide>
         </Swiper>
       </Tabbar>
-      <Tabs>
+      <Tabs className=" my-[5px]">
         <Tab
+
           id="tab-1"
-          className="page-content p-0 my-[5px]"
+          className="page-content Tab mx-[5px]"
           tabActive
-        >
-          <Card className="swipeCard  bg-white  ">
-            <div className="wrapper">
-              <div className="infor flex">
-                <img
-                  className="w-1/6"
-                  src="https://vcdn.tikicdn.com/ts/seller/e8/09/c9/d7ba4998e3f8db0139e9864134770b8a.jpg?date=2022-10-23T06:50"
-                  alt=""
-                />
+        > {swipePageData.map((card,index)=>{
+              return(
+         <div className="cardTab">
+                 <Card  key={`card-${index}`} inset className="swipeCard  bg-white  ">
+                  <div className="wrapper mt-[5px]" >
+             <div className="headerCard flex justify-between pt-[7px]">
+             <div className="infor flex ">
+           <div className="image w-1/6 ">
+           <img
+               src={card.avatar}
+               alt=""
+               className="rounded-full"
+             />
+           </div>
+               
                 <div className="nameCard ml-[7px] ">
-                  <p className="font-bold mt-[13px] mb-0 ">Hồng Hạnh Mobile</p>
+                  <p className="font-bold mt-[13px] mb-0 ">{card.name}</p>
                   <div className="time flex ">
                     <p className="text-[#979797] text-[12px] my-0 ">Nhà bán </p>
                     <p className="text-[#979797] text-[12px] my-0 ml-[4px]">
@@ -73,7 +81,9 @@ export default () => {
                     </p>
                   </div>
                 </div>
-                <div className="flex pl-[39px] space-x-2  items-center  ">
+                
+              </div>
+              <div className="flex   items-center 	">
                   <button
                     type="button"
                     className="bg-blue-600 py-1 px-1 text-white font-medium text-s  rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
@@ -81,39 +91,20 @@ export default () => {
                     FOLLOW
                   </button>
                 </div>
-              </div>
-              <div className="content"></div>
+             </div>
             </div>
             <div className="content mt-[4px]">
               <span>
-                💰 DEAL HOÀNH TRÁNG - NÂNG CẤP 'DẾ' CHO NÀNG 💐 📱 GHÉ HỒNG HẠNH
-                MOBILE - NHANH TAY CHỐT ĐƠN NGAY 🔷 Mua HÀNG CHÍNH HÃNG
+              {card.content}
               </span>
               <img
                 className="rounded"
-                src="https://salt.tikicdn.com/cache/492x492/ts/social/d2/c8/da/3605b5cb9c5a6784d0ac0afa7db27ff3.jpg.webp?h=960&w=960"
+                src={card.image}
                 alt=""
               />
-              <Swiper slidesPerView={5} spaceBetween={2}>
-                {" "}
-                {products.map((product, index) => {
-                  return (
-                    <SwiperSlide className="pb-[5px]" key={`product-${index}`}>
-                      <div className=" w-20 ml-2">
-                        <div
-                          key={product.id}
-                          className="bg-transparent relative group "
-                        >
-                          <div className="w-full rounded-md overflow-hidden ">
-                            <img src={product.imgSrc} />
-                          </div>
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                  );
-                })}
-              </Swiper>
-            </div>
+         
+                </div>
+            
             <div className="react mx-[10px] my-[10px] ">
             <div className="flex">
             <div className="flex ">
@@ -139,7 +130,31 @@ export default () => {
               </div>
             </div>
             </div>
+            
           </Card>
+          <div className="mx-0 w-full h-[8px]"></div>
+         </div>
+              )
+             })}
+         <Swiper className="bg-white mt-[5px]" slidesPerView={5} spaceBetween={2}>
+                {" "}
+                {products.map((product, index) => {
+                  return (
+                    <SwiperSlide className="pb-[5px]" key={`product-${index}`}>
+                      <div className=" w-20 ml-2">
+                        <div
+                          key={product.id}
+                          className="bg-transparent relative group "
+                        >
+                          <div className="w-full rounded-md overflow-hidden ">
+                            <img src={product.imgSrc} />
+                          </div>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
         </Tab>
         <Tab id="tab-2" className="page-content">
           <Card>

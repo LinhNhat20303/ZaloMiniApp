@@ -1,10 +1,10 @@
 {
   "app": {
-    "title": "Tiki",
+    "title": "",
     "headerColor": "#1843EF",
     "textColor": "white",
-    "statusBarColor": "#1843EF",
-    "leftButton": "both"
+    "statusBarColor": "#1843EF"
+    
   },
   "debug": false,
   "listCSS": [],
@@ -31,8 +31,9 @@
     "/tableContent/product_view_from_sub_cate",
     "/tableContent/product_description_from_sub_cate",
     "/SliderToPage/first_slider_home_page",
-    "/SliderToPage/banner_image"
-    
+    "/SliderToPage/banner_image",
+    "/product/CRUDProducts",
+    "/product/ItemListCRUD"
     
   ]
 }

@@ -24,11 +24,18 @@ const HomeComponent = ({}) => {
   const carousel = useStore("getCarouselHomePage");
   const categories = useStore("getCategoryItem")
   const [swipperAcitveLabel, setSwiperActiveLabel] = useState("");
-  useEffect(() => {
-    console.log(programSlide);
-  }, []);
+ 
   return (
     <div className="homePageReturn">
+     <header className="mx-3">
+     <div className="flex justify-between items-center py-[5px]">
+      <div className="">  <img src="https://salt.tikicdn.com/ts/brickv2og/db/eb/7c/a926af0ba3dc2802148bfc39563180c2.png" alt="" /></div>
+        <div className="logo"><img className="w-[40px] h-[27px]" src="https://salt.tikicdn.com/ts/upload/d4/ca/89/28d85ed27396c1beebad8a3fec18bfe4.png" alt="" /></div>
+      <div className="rightCol flex">
+        <img className="w-[26px] h-[26px]" src="	https://salt.tikicdn.com/ts/upload/c5/0b/06/88e5d7fa1a7cb51144fff2933e7269d9.png" alt="" />
+        <img className="w-[24px] h-[24px] ml-[12px]" src="https://salt.tikicdn.com/ts/upload/70/44/6c/a5ac520d156fde81c08dda9c89afaf37.png" alt="" />
+      </div>
+      </div>
       <a href="#" className="searchInput">
         <img
           src="https://salt.tikicdn.com/ts/upload/34/62/0c/6ae13efaff83c66f810c4c63942cf6c0.png"
@@ -42,6 +49,7 @@ const HomeComponent = ({}) => {
           readOnly
         />
       </a>
+     </header>
       <Card className="homePageSecondCard  mx-3 my-1">
         <Swiper
           id="tabConsole"
@@ -52,7 +60,7 @@ const HomeComponent = ({}) => {
           speed={300}
           spaceBetween={50}
           onSlideChange={(sw) => {
-            console.log("activeIndex: ", sw.activeIndex);
+            
           }}
         >
           {" "}
@@ -81,7 +89,7 @@ const HomeComponent = ({}) => {
           speed={1000}
           spaceBetween={50}
           onSlideChange={(sw) => {
-            console.log("activeIndex: ", sw.activeIndex);
+           
           }}
         >
           {" "}
@@ -101,7 +109,7 @@ const HomeComponent = ({}) => {
           })}
         </Swiper>
       </Card>
-      <div className="home&quick">
+      <div className="home_quick">
         <div className="home_brand">
           <div className="style_home_brand">
             <a className="side_brand" href="#">
@@ -191,7 +199,7 @@ const HomeComponent = ({}) => {
               />
             </div>
             <div className="flex  ">
-              <CountdownTimer targetDate2={"2022-11-30 22:00:00"} />
+              <CountdownTimer targetDate2={"2022-12-30 22:00:00"} />
               <img
                 src="https://frontend.tikicdn.com/_mobile-next/static/img/iconsChevronRight.png"
                 alt=""
@@ -274,8 +282,7 @@ const HomeComponent = ({}) => {
         {categories.map((item,index)=>{
         return(
         <SwiperSlide key={`slide${index}`}>
-        
-       <div>
+        <div>
        <img src={item.ImageSrc} alt="" /> 
        <p className="text-[9px] text-center">{item.label}</p>
        </div>
@@ -283,11 +290,9 @@ const HomeComponent = ({}) => {
        <img src={item.ImageSrc} alt="" /> 
        <p className="text-[9px] text-center">{item.label}</p>
        </div>
-       
          </SwiperSlide>
         )
       })}
-        
         </Swiper>
         </div>
       </div>
@@ -298,10 +303,8 @@ const HomeComponent = ({}) => {
        </span>
       </div>
     </div>
-
       <ItemListHomePage />
     </div>
   );
 };
-
 export default HomeComponent;

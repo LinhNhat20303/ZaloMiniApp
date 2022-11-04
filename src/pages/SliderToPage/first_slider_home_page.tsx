@@ -42,19 +42,21 @@ export default function SliderToPage() {
           />
         </Card>
         <Card className="py-0">
-          <img
+         
+          <Card className="bg-[#ffd0dc]">
+          <div className="homePageFifthCardDiv flex flex-col justify-center items-center">
+       
+           <img
             src="	https://salt.tikicdn.com/cache/w1170/ts/brickv2og/b7/55/a1/dd22188f93c75d66efc03b7055a5e031.jpg.webp"
             alt=""
           />
-          <Card className="bg-[#ffd0dc]">
-          <div className="homePageFifthCardDiv">
-       
-          <div>
             {/* <CountdownTimer  /> */}
-            <CountdownTimer targetDate2={"2022-10-25 22:00:00"}/>           
-          </div>
+          <div><CountdownTimer className="Time" targetDate2={"2022-11-25 22:00:00"}/> </div>  
+          
+         
+            
         </div>
-            <ProductSlider />
+           <ProductSlider /> 
           </Card>
         </Card>
       </div>

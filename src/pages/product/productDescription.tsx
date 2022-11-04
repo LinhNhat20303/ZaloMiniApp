@@ -24,6 +24,12 @@ export default function ProductsDescription({ zmproute }) {
     (product) => product.id == queries.product_id
   )[0];
 
+  function handleOnDeleteButton(){
+    let product = prodcutsInformation.filter(
+      (product) => product.id != queries.product_id
+    )[0];
+  
+  }
   useEffect(() => {
     console.log(order);
   }, [order]);
@@ -101,6 +107,9 @@ export default function ProductsDescription({ zmproute }) {
       <Card className="firstCardProducDescription">
         <h4>{product.label}</h4>
         <span> {product.price}</span>
+        <Button onClick={()=>handleOnDeleteButton()} typeName="secondary" responsive >
+        Submit
+      </Button>
       </Card>
 
       <Card className="firstCardProducDescription">

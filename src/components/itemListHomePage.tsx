@@ -8,8 +8,7 @@ import {
   useStore,
   Grid,
   GridItem,
-  Tab,
-  Tabs,
+  Icon,
   Link
 } from "zmp-framework/react";
 import NavbarBack from "../components/navbar-back";
@@ -29,7 +28,7 @@ export default function ItemListHomePage() {
   
   useEffect(()=>{
     itemFiltered = []
-      console.log(tabSelected);
+     
       if( tabSelected == null ){
         itemFiltered= item2;
       } else {
@@ -40,7 +39,7 @@ export default function ItemListHomePage() {
 
   return (
    <div className="bg-white">
-   <div className="sticky top-[60px] z-10">
+   <div className="sticky top-[0px] z-10">
      <Swiper className="bg-[#efefef]  " slidesPerView={4.6} spaceBetween={1}>
       {item.map((product, index) => {
         return (
@@ -73,6 +72,16 @@ export default function ItemListHomePage() {
           <img src={suggestionItem.imageSrc} onClick={()=> zmp.views.main.router.navigate({path:"/tableContent/product_description_from_sub_cate",query:{id:suggestionItem.id}})} alt="" />
           <div className="w-full text-left">
           <div className="my-0 h-[40px] text-[10pt]">{showStringLength(suggestionItem.label,35)}</div>
+          <div className="flex justify-between votingStar items-center ">
+          <p className="m-0 text-[#fdd835] stroke-[#ffb500]">
+            <Icon size={11} zmp="zi-star-solid"></Icon>
+            <Icon size={11} zmp="zi-star-solid"></Icon>
+            <Icon size={11} zmp="zi-star-solid"></Icon>
+            <Icon size={11} zmp="zi-star-solid"></Icon>
+            <Icon size={11} zmp="zi-star-solid"></Icon>
+          </p>
+          <p className="text-[11px] m-0">2591 | Đã bán 5000+</p>
+        </div>
           <h3 className="text-[13pt] my-1 font-semibold text-[red]">{formatCurrency(suggestionItem.price)} đ</h3>
           </div>
         </GridItem>

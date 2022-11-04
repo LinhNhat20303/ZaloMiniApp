@@ -22,10 +22,7 @@ export default function subCategoryProductView({ zmproute }) {
   let product = subCategoryProducts.filter(
     (product) => product.sub_category_id == queries.id
   );
-  useEffect(() => {
-    console.log(queries.id);
-    console.log(product);
-  }, []);
+ 
   return (
     <Page>
       <div className="headerDealhot relative ">
@@ -100,7 +97,7 @@ export default function subCategoryProductView({ zmproute }) {
           speed={1000}
           spaceBetween={50}
           onSlideChange={(sw) => {
-            console.log("activeIndex: ", sw.activeIndex);
+            // console.log("activeIndex: ", sw.activeIndex);
           }}
         >
           {" "}

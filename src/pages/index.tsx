@@ -18,6 +18,8 @@ import {
 import HomeComponent from "../components/home-page";
 import TableOfContentRight from "../components/tableOfContent/styled-sub-cate";
 import TableOfContentLeft from "../components/tableOfContent/styled-left-cate-list";
+import api from 'zmp-sdk';
+import store from "../store";
 const HomePage = () => {
   const [customSheetOpened, setCustomSheetOpened] = useState(true);
   const sheet = useRef(null);
@@ -34,34 +36,41 @@ const HomePage = () => {
   useEffect(function () {}, [viewTableOfContent]);
 
   let [activeHome, setActiveHome] = useState(true);
+  useEffect(()=>{
+  api.getStorage({
+    keys: ['order','storageProduct' ],
+    success: (data) => {
+      // xử lý khi gọi api thành công
+      const { order, storageProduct } = data;
+
+      //console.log(storageProduct);
+      
+      if(order){store.dispatch("setOrder",order);}
+      if(storageProduct){
+      store.dispatch("setProductsStyleSubCate",storageProduct)
+    } 
+    },
+    fail: (error) => {
+      // xử lý khi gọi api thất bại
+      console.log(error);
+    }
+  });
+},[])
+ 
 
   return (
-    <Page noNavbar>
-      {/* Top Navbar */}
-      <Navbar
-        backLink
-        title={
-          <img src="https://salt.tikicdn.com/ts/upload/d4/ca/89/28d85ed27396c1beebad8a3fec18bfe4.png"></img>
-        }
-      >
-        <div className="flex space-x-2 justify-center">
-          <button
-            type="button"
-            className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-600 hover:shadow-lg focus:bg-blue-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out flex items-center"
-          >
-            Cart
-            <span className="inline-block py-1 px-1.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-red-600 text-white rounded ml-2">
-              7
-            </span>
-          </button>
-        </div>
-      </Navbar>
+    <Page  >
+      {/* Top Navbar */}          
+    
+      
 
       {/* Page content */}
       <HomeComponent />
 
       <Tabs>
-        <Tab id="tab-1" className="page-content" tabActive></Tab>
+        <Tab id="tab-1" className="page-content" tabActive>
+
+        </Tab>
         <Tab id="tab-2" className="page-content">
           <Sheet
             ref={swipeRef}
@@ -70,18 +79,18 @@ const HomePage = () => {
             backdrop
             closeButton
             title="Danh Mục Sản Phẩm"
-            className="demo-swipe-to-step-sheet"
+            className="demo-swipe-to-step-sheet "
             style={{ height: "95%" }}
           >
-            <Box></Box>
+         
             <div className="scroll">
-              <div className="scrollPage" style={{ marginLeft: "25%" }}>
+              <div className="scrollPage ml-[25%]">
                 <div className="px-2 scrollPageContent">
                   <TableOfContentRight />
                 </div>
               </div>
 
-              <div className="scrollPage" style={{ width: "25%" }}>
+              <div className="scrollPage w-1/4" style={{ width: "25%" }}>
                 <div className="scrollPageContent">
                   {<TableOfContentLeft />}
                 </div>

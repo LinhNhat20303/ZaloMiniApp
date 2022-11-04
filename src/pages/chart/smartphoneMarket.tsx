@@ -310,7 +310,7 @@ const horizonBarChartPage = () => {
   }, []);
   return (
     <Page name="user">
-      <NavbarBack title="Mô Tả Sản Phẩm" linkRight="/form" labelRight="Edit" />
+      <NavbarBack title="" linkRight="/form" labelRight="Edit" />
 
       {/* <img
         src="https://www.idc.com/getfile.dyn?containerId=prAP49064922&attachmentId=47448745"

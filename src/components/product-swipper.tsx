@@ -3,7 +3,7 @@ import {  Swiper, SwiperSlide, zmp, useStore } from 'zmp-framework/react';
 import { formatCurrency } from '../helper';
 
 export default function ProductSlider() {
-    const campaignSlide = useStore("getCarouselContainerData")
+   
     const products = useStore('getSubCategoryItem')
     return (
 

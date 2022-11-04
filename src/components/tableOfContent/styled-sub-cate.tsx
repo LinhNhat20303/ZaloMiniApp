@@ -34,31 +34,30 @@ export default function TableOfContentRight() {
     setStyleSubCate(subCategoryItem);
   }, [subCategoryItem]);
   return (
-    // <Card className="">
-    //   <Grid noBorder columns={3}>
-    //     {productsElementFilter.map((subCategoryProduct, index) => {
-    //       return (
-    //         <GridItem key={`product-${index}`}>
-    //           <div
-    //             onClick={() =>
-    //               zmp.views.main.router.navigate({
-    //                 path: "/tableContent/product_view_from_sub_cate",
-    //                 query: { id: subCategoryProduct.id },
-    //               })
-    //             }
-    //           >
-    //             <div key={index}>
-    //               <img src={subCategoryProduct.imgSrc} alt="" />
-    //             </div>
-    //             <div>
-    //               <p>{subCategoryProduct.label}</p>
-    //             </div>
-    //           </div>
-    //         </GridItem>
-    //       );
-    //     })}
-    //   </Grid>
-    // </Card>
-    <div></div>
+    <Card className="rightCol">
+      <Grid noBorder columns={3}>
+        {productsElementFilter.map((subCategoryProduct, index) => {
+          return (
+            <GridItem key={`product-${index}`}>
+              <div
+                onClick={() =>
+                  zmp.views.main.router.navigate({
+                    path: "/tableContent/product_view_from_sub_cate",
+                    query: { id: subCategoryProduct.id },
+                  })
+                }
+              >
+                <div key={index}>
+                  <img src={subCategoryProduct.imgSrc} alt="" />
+                </div>
+                <div>
+                  <p>{subCategoryProduct.label}</p>
+                </div>
+              </div>
+            </GridItem>
+          );
+        })}
+      </Grid>
+    </Card>
   );
 }

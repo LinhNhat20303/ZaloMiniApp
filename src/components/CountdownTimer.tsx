@@ -29,7 +29,7 @@ const ExpiredNotice = () => {
     );
 };
 const ShowCounter = ({className, days, hours, minutes, seconds }) => {
-    console.log(days)
+  
     return (
         <div className={className}>
             <a

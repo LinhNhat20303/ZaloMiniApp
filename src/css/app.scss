@@ -11,8 +11,15 @@
 
 .page-content {
   background-color: rgb(198 234 251);
+ 
 }
-
+.Tab{padding-top: 0px;} 
+.swiper-container-initialized{
+  margin:0;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
 .navbar {
   .navbar-inner {
     justify-content: space-between;
@@ -409,7 +416,7 @@
   display: flex;
   flex-direction: row-reverse;
   .scrollPage {
-    width: 75%;
+ 
 
     position: absolute;
     left: 0;
@@ -437,9 +444,13 @@
   overflow: scroll !important;
   border-radius: 5px;
   background-color: rgb(220 238 255);
-  font-size: 8px;
   text-align: center;
-  line-height: 10px;
+  height: 100%;
+  p{
+    font-size: 12px;
+    margin:0;
+  }
+  
 }
 
 .relative {
@@ -465,31 +476,38 @@
 
 .homePageReturn {
   background-image: linear-gradient(to bottom, #2511b9,#1964ff) ;
+  padding-top: 0px;
+  .home_quick{
+    position: relative;
   .home_brand {
-    padding-top: 20px;
-    margin-top: -18px;
+    //padding-top: 20px;
+    margin-top: -23px;
     height: calc(30.2222vw);
     .style_home_brand {
       display: flex;
-      padding: 0px 12px 12px;
+      padding: 0px 14px 14px;
       text-align: center;
       align-items: center;
       -webkit-box-pack: justify;
       justify-content: space-between;
-      position: relative;
+      position: absolute;
+      top: 20px;
       .side_brand img {
         width: calc(27.7333vw);
         display: block;
         border-radius: 8px;
       }
       .center_brand img {
+        margin: 0 6px 0 4px;
         width: calc(36.2667vw);
         height: calc(30.2222vw);
+        
       }
     }
-  }
+  }}
   .searchInput {
-    margin: 61px 8px 4px 8px;
+   
+   margin-bottom: 4px; 
     display: flex;
     text-align: center;
     align-items: center;
@@ -732,6 +750,7 @@
   }
  
 }
+
 //Scroll
 ////////////////////////////////////////////////////////////////////////////////////////////
 // Char

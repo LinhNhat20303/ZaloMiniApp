@@ -463,6 +463,7 @@ const store = createStore({
           "https://salt.tikicdn.com/cache/280x280/media/catalog/producttmp/b7/94/b3/5dd23e7114a08d6cf832305ee882190f.jpg",
       },
     ],
+  
     productsStyleSubCate: [
       {
         id: "1",
@@ -740,6 +741,7 @@ const store = createStore({
       buy_time: "",
       expected_shipping_time: "",
     },
+    
     orderexp: {
       order_id: "U6ojtKeTILVE",
       product_list: [
@@ -885,10 +887,52 @@ const store = createStore({
       {
         id: 1,
         avatar:
-          "https://salt.tikicdn.com/cache/60x0/ts/social/41/73/87/bd7d53acc29abffa64da98279c8da7ae.jpg.webp?date=2022-10-23T08:11",
+          "https://vcdn.tikicdn.com/ts/seller/33/29/a5/fbc69d21b59b7d79216e87d36b9e52df.jpg?date=2022-11-01T05:39",
+          image:"https://salt.tikicdn.com/cache/492x492/ts/social/da/41/54/aceda611db70132ae7dc092d4a287bde.jpg.webp?h=1202&w=1202",
         name: "DoriDori",
-        content: "",
+        content:`[LIVESTREAM 01/11] CÙNG ĐI TÌM CHỦ NHÂN MERCEDES 2 TỶ
+
+        🤔 "Số gì đây - Số gì đây" 🤔 Khoảng khắc mà chúng ta đều mong chờ cuối cùng đã đến! Đón xem ngay Livestream quay thưởng "Chốt Đơn Rinh Quà" với loạt giải thưởng xịn xò lên đến 2 TỶ gồm:
+        🚘 01 Giải Đặc Biệt: Xe Mercedes-Benz C200 Avantgarde trị giá 1.669.000.000 đồng
+        🏍️ 01 Giải Nhất: Coupon điện tử mua Honda vision cao cấp trị giá 43.300.000 đồng
+        💻 01 Giải Nhì: Apple MacBook Pro 2020 13 Inch MYDA2SA/A - Silver trị giá 28.000.000 đồng
+        📱 01 Giải Ba: iPhone 13 Pro Max 128GB - Xanh Lá trị giá 26.990.000 đồng
+        🖥️ 02 Giải Tư: Smart Tivi QLED Samsung 4K 65 inch QA65Q70BA - Model 2022 trị giá 23.990.000 đồng
+        🎁 04 Giải Năm: Robot Hút Bụi Lau Nhà Fmart E-R550W trị giá 6.460.000 đồng
+        
+        👉 Xem thêm tại: `,
       },
+      {id:2,
+        avatar:"https://vcdn.tikicdn.com/ts/seller/c2/d9/01/43d82628cee443204b3d245a54c591cb.jpg?date=2022-11-01T04:49",
+        image:"https://salt.tikicdn.com/cache/492x492/ts/social/0a/04/43/e8c5c23d3d87f92274cacc25568c9fef.jpg.webp?h=900&w=900",
+        name: "Điện máy tiện lợi s52",
+        content:`Full video feedback từ khách hàng yêu của Điện máy s52!!!
+
+        📷 Bất kể nắng mưa - Cần là có S52 giao ngay.`
+      },
+      {id:3,
+        avatar:"https://salt.tikicdn.com/cache/w220/ts/seller/38/e6/69/f4802711b0158c1e1d4c84db5de0bf55.jpg.webp?date=2022-11-01T04:49",
+        image:"https://salt.tikicdn.com/cache/480x854/ts/social/61/80/3a/dc044fc5fa15d4435e0e64322cf8a0cb.jpg.webp?h=854&w=480",
+        name: "Thế giới pha chế ",
+        content:`Máy xay, máy ép, máy làm sữa hạt cao cấp của thương hiệu Promix & Yubann đã có mặt tại "Thế giới pha chế" mọi người nhé `
+      },
+      {id:4,
+        avatar:"https://vcdn.tikicdn.com/ts/seller/f4/db/03/cd2ebfaf3382145274300555305fcf62.jpg?date=2022-11-01T04:49",
+        image:"https://salt.tikicdn.com/cache/280x280/ts/product/10/24/67/382cc422356f943a33ac67d7b2742ce6.jpg.webp",
+        name: "Shop Ngọc Bích ",
+        content:`Cặp Đa Năng Lugbro Biz được trang bị ngăn lưới chứa quần áo rộng rãi, ngăn laptop có lớp đệm chống sốc bảo vệ đồ dùng tố`
+      },
+      {id:5,
+        avatar:"https://vcdn.tikicdn.com/ts/seller/f4/db/03/cd2ebfaf3382145274300555305fcf62.jpg?date=2022-11-01T04:49",
+        image:"	https://salt.tikicdn.com/cache/542x542/ts/review/f6/87/76/176fe2c0eacefc21d91ad2d844482f8e.jpg.webp",
+        name: "Sách Thiện Tri Thức",
+        content:`Cặp Đa Năng Lugbro Biz được trang bị ngăn lưới chứa quần áo rộng rãi, ngăn laptop có lớp đệm chống sốc bảo vệ đồ dùng tố`
+      },
+      {id:6,
+      avatar:"https://vcdn.tikicdn.com/ts/seller/e8/09/c9/d7ba4998e3f8db0139e9864134770b8a.jpg?date=2022-10-23T06:50",
+      image:"https://salt.tikicdn.com/cache/492x492/ts/social/d2/c8/da/3605b5cb9c5a6784d0ac0afa7db27ff3.jpg.webp?h=960&w=960",
+      name:"Hồng Hạnh Mobile",
+    content:`💰 DEAL HOÀNH TRÁNG - NÂNG CẤP 'DẾ' CHO NÀNG 💐 📱 GHÉ HỒNG HẠNH MOBILE - NHANH TAY CHỐT ĐƠN NGAY 🔷 Mua HÀNG CHÍNH HÃNG`}
     ],
     quickLinkData: [
       {
@@ -1045,6 +1089,9 @@ const store = createStore({
     },
     getCarouselContainerData({state}){
       return state.carouselContainerData
+    },
+    getSwipePageData({state}){
+      return state.swipePageData
     }
   },
   actions: {
@@ -1090,6 +1137,9 @@ const store = createStore({
     setFamilySelected({ state }, data) {
       return (state.familySelected = data);
     },
+    setProductsStyleSubCate({state}, data){
+      return (state.productsStyleSubCate = data);
+    }
   },
 });
 
