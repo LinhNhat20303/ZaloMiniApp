@@ -28,6 +28,7 @@
     "faker": "^5.5.3",
     "git": "^0.1.5",
     "github": "^14.0.0",
+    "node-foo": "^0.2.3",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-chartjs-2": "^4.3.1",
