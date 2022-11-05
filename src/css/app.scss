@@ -13,6 +13,10 @@
   background-color: rgb(198 234 251);
  
 }
+.demo-swipe-to-step-sheet{
+  height:95%;
+  background-color: #eeeeee;
+}
 .Tab{padding-top: 0px;} 
 .swiper-container-initialized{
   margin:0;
@@ -415,6 +419,7 @@
 .scroll {
   display: flex;
   flex-direction: row-reverse;
+  height: fit-content;
   .scrollPage {
  
 
@@ -443,12 +448,14 @@
 .leftCol {
   overflow: scroll !important;
   border-radius: 5px;
-  background-color: rgb(220 238 255);
   text-align: center;
   height: 100%;
   p{
-    font-size: 12px;
+    font-size: 11px;
+    line-height: 16px;
+    text-align: center;
     margin:0;
+    color: rgb(128, 128, 137);
   }
   
 }

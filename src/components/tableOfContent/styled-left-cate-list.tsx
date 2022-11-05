@@ -21,8 +21,10 @@ export default function TableOfContentLeft() {
           return (
             <div key={`product-${index}`}>
               
-              <div onClick={()=>Selected(product.id)}  >
-              <img src={product.ImageSrc} alt="#" />
+              <div className="flex flex-col justify-center" onClick={()=>Selected(product.id)}  >
+              <div>
+              <img className="w-[45px] h-[45px]" src={product.ImageSrc} alt="#" />
+              </div>
               <div>
             
                 <p>{product.label}</p>

@@ -34,7 +34,8 @@ export default function TableOfContentRight() {
     setStyleSubCate(subCategoryItem);
   }, [subCategoryItem]);
   return (
-    <Card className="rightCol">
+    <Card className="rightCol bg-[#eeeeee] p-1">
+      <div className="bg-white pb-[32px] rounded-md">
       <Grid noBorder columns={3}>
         {productsElementFilter.map((subCategoryProduct, index) => {
           return (
@@ -51,13 +52,14 @@ export default function TableOfContentRight() {
                   <img src={subCategoryProduct.imgSrc} alt="" />
                 </div>
                 <div>
-                  <p>{subCategoryProduct.label}</p>
+                  <p className="text-[12px]">{subCategoryProduct.label}</p>
                 </div>
               </div>
             </GridItem>
           );
         })}
       </Grid>
+      </div>
     </Card>
   );
 }

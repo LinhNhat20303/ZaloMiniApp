@@ -79,18 +79,18 @@ const HomePage = () => {
             backdrop
             closeButton
             title="Danh Mục Sản Phẩm"
-            className="demo-swipe-to-step-sheet "
-            style={{ height: "95%" }}
+            className="demo-swipe-to-step-sheet"
+            
           >
          
             <div className="scroll">
               <div className="scrollPage ml-[25%]">
-                <div className="px-2 scrollPageContent">
+                <div className="px-2 scrollPageContent bg-[#eeeeee] ">
                   <TableOfContentRight />
                 </div>
               </div>
 
-              <div className="scrollPage w-1/4" style={{ width: "25%" }}>
+              <div className="scrollPage w-1/4" >
                 <div className="scrollPageContent">
                   {<TableOfContentLeft />}
                 </div>
