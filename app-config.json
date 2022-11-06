@@ -33,7 +33,8 @@
     "/SliderToPage/first_slider_home_page",
     "/SliderToPage/banner_image",
     "/product/CRUDProducts",
-    "/product/ItemListCRUD"
-    
+    "/product/ItemListCRUD",
+    "/product/CloneCRUDProduct/cloneProductsList",
+    "/product/CloneCRUDProduct/formCreateProduct"
   ]
 }
