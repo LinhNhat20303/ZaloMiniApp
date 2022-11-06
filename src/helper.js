@@ -38,7 +38,7 @@ export function trimText(str, wordCount) {
   return result + "...";
 }
 export function showStringLength(str, strLength) {
-  if (str.length > strLength) {
+  if (str?.length > strLength) {
     str = str.substring(0, strLength);
     return str + "...";
   }
