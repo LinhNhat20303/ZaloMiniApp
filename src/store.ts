@@ -206,6 +206,82 @@ const store = createStore({
         imageSrc:
           "https://salt.tikicdn.com/cache/280x280/ts/product/7f/dd/bf/d8c68330e0746afc2df65f4150e4165f.png.webp",
       },
+      {
+        subcategory_id: "WaterItem",
+        id: 6,
+        imageSrc:
+          "https://salt.tikicdn.com/cache/w750/media/catalog/producttmp/22/10/e8/7de6b57d5eb8ac17fb7948960995c958.PNG.webp",
+        name: "Thùng 24 Lon Nước Tăng Lực Sting Dâu (320ml/Lon)",
+        price: 202000,
+        old_price: 50000000,
+        descriptionImg:
+          "https://salt.tikicdn.com/cache/w750/media/catalog/producttmp/85/39/6e/0acc2f059911b036036648a8c7e6df89.PNG.webp",
+        description:
+          "Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Bên cạnh đó, tuỳ vào loại sản phẩm, hình thức và địa chỉ giao hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển, phụ phí hàng cồng kềnh, thuế nhập khẩu (đối với đơn hàng giao từ nước ngoài có giá trị trên 1 triệu đồng).....",
+      },
+      {
+        id: 7,
+        imageSrc:
+          "	https://salt.tikicdn.com/cache/w750/ts/product/93/c6/30/f9bf3ea758c116dcb555e8ac99362ebb.jpg.webp",
+        name: "Smart Tivi Qled The Frame Samsung 4K 50 inch QA50LS03A",
+        price: 100000,
+        old_price: 10000000,
+        descriptionImg:
+          "https://salt.tikicdn.com/cache/w750/ts/product/55/7b/f1/1471e2b525317cc21654260ace178b10.jpg.webp",
+        description:
+          "Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Bên cạnh đó, tuỳ vào loại sản phẩm, hình thức và địa chỉ giao hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển, phụ phí hàng cồng kềnh, thuế nhập khẩu (đối với đơn hàng giao từ nước ngoài có giá trị trên 1 triệu đồng).....",
+      },
+      {
+        id: 8,
+        imageSrc:
+          "	https://salt.tikicdn.com/cache/w750/ts/product/4c/83/6b/298a24fe79da1db1304837c6937c0bc4.jpg.webp",
+        name:
+          "Giá Đỡ Laptop Hợp Kim Nhôm Cao Cấp Có Thể Gấp Gọn, Giúp Tản Nhiệt Laptop, Macbook,",
+        price: 120000,
+        old_price: 10200000,
+        descriptionImg:
+          "	https://salt.tikicdn.com/cache/w750/ts/tmp/d2/9e/60/1eee641f68ebaa4d891f7512f3400784.jpg.webp",
+        description:
+          "Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Bên cạnh đó, tuỳ vào loại sản phẩm, hình thức và địa chỉ giao hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển, phụ phí hàng cồng kềnh, thuế nhập khẩu (đối với đơn hàng giao từ nước ngoài có giá trị trên 1 triệu đồng).....",
+      },
+      {
+        subcategory_id: "WaterItem",
+        id: 9,
+        imageSrc:
+          "https://salt.tikicdn.com/cache/w750/media/catalog/producttmp/49/94/fc/6ade00672e632f1b6bed9f120ee8c72a.PNG.webp	",
+        name: "Thùng 24 Chai Trà Ô Long Tea+ Plus (455ml / Chai)",
+        price: 120500,
+        old_price: 11200000,
+        descriptionImg:
+          "https://salt.tikicdn.com/cache/w750/media/catalog/producttmp/f5/62/74/5b3e67dd37bbdad389fe8625a1ac9ad0.PNG.webp",
+        description:
+          "Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Bên cạnh đó, tuỳ vào loại sản phẩm, hình thức và địa chỉ giao hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển, phụ phí hàng cồng kềnh, thuế nhập khẩu (đối với đơn hàng giao từ nước ngoài có giá trị trên 1 triệu đồng).....",
+      },
+      {
+        subcategory_id: "WaterItem",
+        id: 10,
+        imageSrc:
+          "https://salt.tikicdn.com/cache/w750/media/catalog/producttmp/dc/05/a3/8b3815e58eea4c72b41ac988d30d81bb.PNG.webp",
+        name: "Thùng 24 Lon Nước Tăng Lực Sting Dâu (320ml/Lon)",
+        price: 220500,
+        old_price: 50000000,
+        descriptionImg:
+          "https://salt.tikicdn.com/cache/w750/media/catalog/producttmp/85/39/6e/0acc2f059911b036036648a8c7e6df89.PNG.webp",
+        description:
+          "Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Bên cạnh đó, tuỳ vào loại sản phẩm, hình thức và địa chỉ giao hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển, phụ phí hàng cồng kềnh, thuế nhập khẩu (đối với đơn hàng giao từ nước ngoài có giá trị trên 1 triệu đồng).....",
+      },
+      {
+        subcategory_id: "WaterItem",
+        id: 11,
+        imageSrc:
+          "https://salt.tikicdn.com/ts/category/92/b5/c0/3ffdb7dbfafd5f8330783e1df20747f6.png",
+        name: "May Tinh Laptop",
+        price: 2200000000,
+        descriptionImg:
+          "https://salt.tikicdn.com/cache/w750/media/catalog/producttmp/85/39/6e/0acc2f059911b036036648a8c7e6df89.PNG.webp",
+        description:
+          "Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Bên cạnh đó, tuỳ vào loại sản phẩm, hình thức và địa chỉ giao hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển, phụ phí hàng cồng kềnh, thuế nhập khẩu (đối với đơn hàng giao từ nước ngoài có giá trị trên 1 triệu đồng).....",
+      },
     ],
     productDescriptionData: [
       {
@@ -1133,6 +1209,9 @@ const store = createStore({
     },
     setNewItemSwiperHomePage({ state }, data) {
       return (state.order = data);
+    },
+    setProdcutsInformationData({state}, data){
+      return (state.prodcutsInformationData = data);
     },
     setFamilySelected({ state }, data) {
       return (state.familySelected = data);

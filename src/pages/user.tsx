@@ -76,6 +76,10 @@ const UserPage = () => {
            <Icon className='list-icon' slot='media' zmp='zi-edit' />
            <Icon className='list-icon' zmp='zi-chevron-right' ></Icon>
            </ListItem>
+           <ListItem onClick={()=>zmp.views.main.router.navigate("/product/CloneCRUDProduct/cloneProductsList")} link="#" title='Clone Danh Sách Sản Phẩm' >
+           <Icon className='list-icon' slot='media' zmp='zi-more-grid-solid' />
+           <Icon className='list-icon' zmp='zi-chevron-right' ></Icon>
+           </ListItem>
         </List>
       
     </Page>
