@@ -18,18 +18,26 @@ import api from "zmp-sdk";
 export default function CrudProducts() {
   
   const submitProduct = useStore("getProdcutsInformationData");
-//   const handleOnSubmitForm = (e) =>{
-//     e.preventDefault();
-//     const data = zmp.form.convertToData("#fillProductForm")
-//   }
+
 function handleOnSubmitForm(){
     const newProduct = zmp.form.convertToData("#fillProductForm");
-    try{
+    let valid = false;
+    if (!newProduct.name || !newProduct.imageSrc|| !newProduct.price||!newProduct.description) {
+        valid = false;
+        
+    }else{
+        valid= true;
+    }
+    try{ 
+        if(valid = true){
         newProduct.id = submitProduct.length + 1;
         submitProduct.push(newProduct);
         console.log(newProduct);
         store.dispatch("setProductsStyleSubCate", submitProduct);
-        zmp.views.main.router.navigate("/");
+        zmp.views.main.router.navigate("/product/CloneCRUDProduct/cloneProductsList");}
+        else{
+            alert("thieu du lieu")
+        }
     }catch (error) {
         alert("Submit fail");
       }
@@ -46,7 +54,7 @@ function handleOnSubmitForm(){
           form
           id="fillProductForm"
           noHairlines
-          onSubmit={()=>handleOnSubmitForm()}
+          
         >
           {/* text input */}
           <ListInput
@@ -103,10 +111,10 @@ function handleOnSubmitForm(){
             //   onClick={() =>
             //     queries.id ? handleOnUpdateButton() : handleOnSubmitForm()
             //   }
-            // onClick={() =>
-            //      handleOnSubmitForm()
-            //   }
-            type="submit"
+            onClick={() =>
+                 handleOnSubmitForm()
+              }
+           
               typeName="secondary"
               responsive
             >
