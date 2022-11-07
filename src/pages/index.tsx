@@ -38,16 +38,19 @@ const HomePage = () => {
   let [activeHome, setActiveHome] = useState(true);
   useEffect(()=>{
   api.getStorage({
-    keys: ['order','storageProduct' ],
+    keys: ['order','storageProduct','cloneProduct' ],
     success: (data) => {
       // xử lý khi gọi api thành công
-      const { order, storageProduct } = data;
+      const { order, storageProduct,cloneProduct } = data;
 
       //console.log(storageProduct);
       
       if(order){store.dispatch("setOrder",order);}
       if(storageProduct){
       store.dispatch("setProductsStyleSubCate",storageProduct)
+      if(cloneProduct){
+        store.dispatch("setProdcutsInformationData", cloneProduct)
+      }
     } 
     },
     fail: (error) => {

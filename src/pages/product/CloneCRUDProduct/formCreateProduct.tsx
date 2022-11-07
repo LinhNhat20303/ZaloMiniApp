@@ -33,9 +33,15 @@ function handleOnSubmitForm(){
         newProduct.id = submitProduct.length + 1;
         submitProduct.push(newProduct);
         console.log(newProduct);
-        store.dispatch("setProductsStyleSubCate", submitProduct);
-        zmp.views.main.router.navigate("/product/CloneCRUDProduct/cloneProductsList");}
-        else{
+        store.dispatch("setProdcutsInformationData", submitProduct);
+        api.setStorage({
+            data: {
+              clone: submitProduct,
+            },
+            
+          });
+                zmp.views.main.router.navigate("/product/CloneCRUDProduct/cloneProductsList");}
+                else{
             alert("thieu du lieu")
         }
     }catch (error) {

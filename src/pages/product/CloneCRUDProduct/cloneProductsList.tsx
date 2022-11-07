@@ -16,7 +16,7 @@ import {
 import AppItems from "../../../components/app-items";
 import CountdownTimer from "../../../components/CountdownTimer";
 import NavbarBack from "../../../components/navbar-back";
-import { showStringLength } from "../../../helper";
+import { formatCurrency, showStringLength } from "../../../helper";
 import store from "../../../store";
 import api from "zmp-sdk";
 
@@ -29,7 +29,12 @@ export default function cloneProductsList() {
   function del(id){
     let newProductList = newElements.filter((item)=> item.id!=id)
     setNewElements(newProductList)
-    store.dispatch("setProductsStyleSubCate",newProductList );
+    store.dispatch("setProdcutsInformationData", newElements);
+    api.setStorage({
+      data: {
+        cloneProduct: newElements,
+      },
+    })
   }
  
  
@@ -73,7 +78,7 @@ export default function cloneProductsList() {
                       </div>
                       <div className="flex justify-between">
                         <div className="m-0 text-[red]">
-                          {subCateProduct.price}
+                          {formatCurrency(subCateProduct.price)}
                         </div>
                       <div className=" flex justify-end">
                       <Button
