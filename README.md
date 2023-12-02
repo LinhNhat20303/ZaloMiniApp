@@ -14,3 +14,4 @@ This is an TIKI App Clone
 * * 🔥 `start` - run development server
 
 ## Preview
+https://drive.google.com/file/d/1_EEIVXypzhXy7_2ApjMY7IHzfT5YJXeA/view
