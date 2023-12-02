@@ -14,3 +14,7 @@ This is an TIKI App Clone
 * * 🔥 `start` - run development server
 
 ## Preview
+
+
+https://github.com/LinhNhat20303/ZaloMiniApp/assets/95093561/de3bb56a-c33b-4052-bfa3-13fddb8bb394
+
