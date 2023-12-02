@@ -12,3 +12,5 @@ This is an TIKI App Clone
 
 * `npm install` - To Start this project do this command to get everything already
 * * 🔥 `start` - run development server
+
+## Preview
